@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="logo">WATPark</string>
+    <string name="app_name">WATPark</string>
+    <string name="table">Table</string>
+    <string name="map">Map</string>
+    <string name="lotIcon">Lot Icon</string>
+    <string name="mapPreview">Map Preview</string>
+    <string name="mapLink">Map Link</string>
+    <string name="directionsLink">Directions Link</string>
+    <string name="seeMap">View on Map</string>
+    <string name="getDirections">Directions</string>
+    <string name="hoursOfOperation">Hours of Operation:</string>
+    <string name="onehour">1h</string>
+    <string name="oneday">1d</string>
+    <string name="oneweek">1w</string>
+    <string name="onemonth">1m</string>
+    <string name="statistics">Statistics</string>
+    <string name="statisticsLink">Statistics Link</string>
+    <string name="nodata">No data for this time period</string>
+    <string name="loading">Loading...</string>
+    <string name="header">Header</string>
+    <string name="nodataStatus">No data available for this lot</string>
+    <string name="maintenanceStatus">Lot down for maintenance</string>
+</resources>

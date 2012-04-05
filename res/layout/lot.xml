@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:watpark="http://schemas.android.com/apk/res/com.watpark.android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- lot info and map preview -->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <!-- lot info (title, icon, progress) -->
+
+        <RelativeLayout
+            android:id="@+id/mainInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1" >
+
+            <!-- title and icon -->
+
+            <RelativeLayout
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/lotIcon"
+                    android:src="@drawable/icon" >
+                </ImageView>
+
+                <com.watpark.android.uielements.TextViewCustom
+                    android:id="@+id/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/icon"
+                    watpark:customFont="OpenSans-Regular.ttf"
+                    android:textColor="#FFFFFF"
+                    android:textSize="35dp" >
+                </com.watpark.android.uielements.TextViewCustom>
+            </RelativeLayout>
+
+            <!-- progress bar -->
+
+            <com.watpark.android.uielements.TextProgressBar
+                android:id="@+id/progress"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/title"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp" />
+        </RelativeLayout>
+
+        <!-- map preview -->
+
+        <ImageView
+            android:id="@+id/mapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/mapPreview"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <!-- hours of operation -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <com.watpark.android.uielements.TextViewCustom
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hoursOfOperation"
+            watpark:customFont="OpenSans-Bold.ttf"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
+            android:textStyle="bold" >
+        </com.watpark.android.uielements.TextViewCustom>
+
+        <com.watpark.android.uielements.TextViewCustom
+            android:id="@+id/hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            watpark:customFont="OpenSans-Regular.ttf"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp" >
+        </com.watpark.android.uielements.TextViewCustom>
+    </LinearLayout>
+
+    <!-- go to map link -->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapLink"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/textclick"
+        android:clickable="true"
+        android:focusable="true" >
+
+        <ImageView
+            android:id="@+id/mapIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/mapLink"
+            android:src="@drawable/map" >
+        </ImageView>
+
+        <com.watpark.android.uielements.TextViewCustom
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/mapIcon"
+            watpark:customFont="OpenSans-Regular.ttf"
+            android:text="@string/seeMap"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" >
+        </com.watpark.android.uielements.TextViewCustom>
+    </RelativeLayout>
+
+    <!-- directions link -->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/dirLink"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/textclick"
+        android:clickable="true"
+        android:focusable="true" >
+
+        <ImageView
+            android:id="@+id/dirIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/directionsLink"
+            android:src="@drawable/direct" >
+        </ImageView>
+
+        <com.watpark.android.uielements.TextViewCustom
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/dirIcon"
+            android:text="@string/getDirections"
+            watpark:customFont="OpenSans-Regular.ttf"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" >
+        </com.watpark.android.uielements.TextViewCustom>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/zoomtabs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33" >
+
+            <com.watpark.android.uielements.TextViewCustom
+                android:id="@+id/zoomhour"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rounded_box_blue"
+                android:clickable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="6dip"
+                watpark:customFont="OpenSans-Regular.ttf"
+                android:text="@string/onehour"
+                android:textColor="#FFFFFF"
+                android:textSize="13dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33" >
+
+            <com.watpark.android.uielements.TextViewCustom
+                android:id="@+id/zoomday"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rounded_box_black"
+                android:clickable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="6dip"
+                watpark:customFont="OpenSans-Regular.ttf"
+                android:text="@string/oneday"
+                android:textColor="#FFFFFF"
+                android:textSize="13dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33" >
+
+            <com.watpark.android.uielements.TextViewCustom
+                android:id="@+id/zoomweek"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rounded_box_black"
+                android:clickable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="6dip"
+                watpark:customFont="OpenSans-Regular.ttf"
+                android:text="@string/oneweek"
+                android:textColor="#FFFFFF"
+                android:textSize="13dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/hourChart"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/dayChart"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/weekChart"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/statusMessage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

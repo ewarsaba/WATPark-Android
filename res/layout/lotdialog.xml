@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:watpark="http://schemas.android.com/apk/res/com.watpark.android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- lot info and progress -->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/lotIcon"
+            android:src="@drawable/icon" >
+        </ImageView>
+
+        <com.watpark.android.uielements.TextViewCustom
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/icon"
+            watpark:customFont="OpenSans-Regular.ttf"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" >
+        </com.watpark.android.uielements.TextViewCustom>
+
+        <com.watpark.android.uielements.TextProgressBar
+            android:id="@+id/progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/label" />
+    </RelativeLayout>
+
+    <!-- directions link -->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/dirLink"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/textclick"
+        android:clickable="true"
+        android:focusable="true" >
+
+        <ImageView
+            android:id="@+id/dirIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/directionsLink"
+            android:src="@drawable/direct" >
+        </ImageView>
+
+        <com.watpark.android.uielements.TextViewCustom
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/dirIcon"
+            watpark:customFont="OpenSans-Regular.ttf"
+            android:text="@string/getDirections"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" >
+        </com.watpark.android.uielements.TextViewCustom>
+    </RelativeLayout>
+
+    <!-- statistics link -->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/statLink"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/textclick"
+        android:clickable="true"
+        android:focusable="true" >
+
+        <ImageView
+            android:id="@+id/statIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/statisticsLink"
+            android:src="@drawable/stat" >
+        </ImageView>
+
+        <com.watpark.android.uielements.TextViewCustom
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/statIcon"
+            watpark:customFont="OpenSans-Regular.ttf"
+            android:text="@string/statistics"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" >
+        </com.watpark.android.uielements.TextViewCustom>
+    </RelativeLayout>
+
+</LinearLayout>

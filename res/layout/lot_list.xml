@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:watpark="http://schemas.android.com/apk/res/com.watpark.android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_margin="0dp"
+        android:contentDescription="@string/header"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/header" />
+
+    <ListView
+        android:id="@+id/lotList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+    <!-- go to map link -->
+
+    <LinearLayout
+        android:id="@+id/mapLink"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/textclick"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" >
+
+            <ImageView
+                android:id="@+id/mapIcon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:contentDescription="@string/mapLink"
+                android:src="@drawable/map" >
+            </ImageView>
+
+            <com.watpark.android.uielements.TextViewCustom
+                android:id="@+id/mapLinkText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@id/mapIcon"
+                watpark:customFont="OpenSans-Regular.ttf"
+                android:text="@string/seeMap"
+                android:textColor="#FFFFFF"
+                android:textSize="25dp" >
+            </com.watpark.android.uielements.TextViewCustom>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

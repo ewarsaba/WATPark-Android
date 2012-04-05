@@ -1,0 +1,5 @@
+WATPark is a fourth-year design project made by Tom Joynt, Dan Malakieh, Tim Costa, and Eric Warsaba. Through a collaboration with UW Parking Services, WATPark is able to give real-time car count data from Lot C, as well as provide other information regarding the remaining student lots.
+
+The Android application is able to display the current count from Lot C, as well as the count history for the last hour, day, and week. The counts are shown using the AndroidPlot library.
+
+http://www.watpark.ca
